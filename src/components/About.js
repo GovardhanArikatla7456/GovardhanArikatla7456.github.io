@@ -26,7 +26,7 @@ const About= () => {
       <Text>Software Engineer with 2 years of professional experience in 
         software applications development with multiple tech stacks in 
         front-end and back-end development. Enthusiastic to solve and get wide exposure with the challenges from 
-        diverse work culture and organizations.</Text>
+        diverse work culture and organizations. Deployed </Text>
     </Section>
   );
 }
