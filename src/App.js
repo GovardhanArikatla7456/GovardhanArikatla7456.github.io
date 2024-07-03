@@ -33,6 +33,7 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" component={Home} /> {/* Fallback route, can be a custom 404 component */}
         </Routes>
       </Router>
     </ThemeProvider>
