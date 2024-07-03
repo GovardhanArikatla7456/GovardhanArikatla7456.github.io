@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
-//import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { theme, GlobalStyle } from './theme';
-import Navbar from './components/Navbar.js';
+import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
+import ProjectDetails from './components/ProjectDetails';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
@@ -20,17 +21,20 @@ function App() {
   }, []);
 
   return (
-    <ThemeProvider theme={ theme}>
-      <GlobalStyle/>
-    <div className="App">
-      <Navbar />
-      <Home />
-      <About />
-      <Projects />
-      <Skills />
-      <Experience />
-      <Contact />
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDetails />} />
+          <Route path="/skills" element={<Skills />} />
+          <Route path="/experience" element={<Experience />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   );
 }

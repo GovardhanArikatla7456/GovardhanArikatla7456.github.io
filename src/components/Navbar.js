@@ -1,5 +1,5 @@
 import React from 'react';
-//import './Navbar.css';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Nav = styled.nav`
@@ -17,7 +17,7 @@ const NavList = styled.ul`
 const NavItem = styled.li`
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   color: ${props => props.theme.colors.white};
   font-weight: bold;
   &:hover {
@@ -29,15 +29,14 @@ const Navbar = () => {
   return (
     <Nav>
       <NavList>
-        <NavItem><NavLink href="#home">Home</NavLink></NavItem>
-        <NavItem><NavLink href="#about">About Me</NavLink></NavItem>
-        <NavItem><NavLink href="#projects">Projects</NavLink></NavItem>
-        <NavItem><NavLink href="#skills">Skills</NavLink></NavItem>
-        <NavItem><NavLink href="#experience">Experience</NavLink></NavItem>
-        <NavItem><NavLink href="#contact">Contact</NavLink></NavItem>
+        <NavItem><NavLink to="/">Home</NavLink></NavItem>
+        <NavItem><NavLink to="/about">About Me</NavLink></NavItem>
+        <NavItem><NavLink to="/projects">Projects</NavLink></NavItem>
+        <NavItem><NavLink to="/skills">Skills</NavLink></NavItem>
+        <NavItem><NavLink to="/experience">Experience</NavLink></NavItem>
+        <NavItem><NavLink to="/contact">Contact</NavLink></NavItem>
       </NavList>
     </Nav>
-    
   );
 }
 
