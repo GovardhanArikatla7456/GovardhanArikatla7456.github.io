@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="0; URL=/#/404?path=%2F404.html">
+  <meta http-equiv="refresh" content="0;url=./">
 </head>
 <body>
+  <script>
+    // Preserve the path in the URL and redirect to the root
+    const pathname = window.location.pathname;
+    window.location.replace(`./?path=${pathname}`);
+  </script>
 </body>
 </html>
