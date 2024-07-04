@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import './Projects.css';
+//import './Projects.css';
 
 const Section = styled.section`
   text-align: center;
@@ -17,33 +17,34 @@ const Title = styled.h2`
 const ProjectLink = styled(Link)`
   display: block;
   margin: 20px 0;
-  padding: 20px;
-  border: 1px solid #ddd;
+  padding: 15px;
   border-radius: 5px;
-  background-color: #f7f7f7;
+  background: linear-gradient(45deg, #f7f7f7, #e0e0e0);
   text-decoration: none;
   color: ${props => props.theme.colors.text};
+  transition: all 0.3s ease;
+
   &:hover {
-    background-color: ${props => props.theme.colors.primary};
+    background: linear-gradient(45deg, ${props => props.theme.colors.primary}, ${props => props.theme.colors.secondary});
     color: ${props => props.theme.colors.white};
+    transform: translateY(-2px);
   }
 `;
+
+
 
 const Projects = () => {
   return (
     <Section id="projects" data-aos="fade-left">
       <Title>Projects</Title>
       <ProjectLink to="/projects/1">
-        <h3>Project 1</h3>
-        <p>Click to view details.</p>
+        <h3>Web application for movie name prediction based on movie scripts </h3>
       </ProjectLink>
       <ProjectLink to="/projects/2">
-        <h3>Project 2</h3>
-        <p>Click to view details.</p>
+        <h3>Mobile Application Development</h3>
       </ProjectLink>
       <ProjectLink to="/projects/3">
-        <h3>Project 3</h3>
-        <p>Click to view details.</p>
+        <h3>Web Application for auto CV generation</h3> 
       </ProjectLink>
     </Section>
   );

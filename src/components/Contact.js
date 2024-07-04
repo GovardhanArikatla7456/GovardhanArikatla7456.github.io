@@ -97,7 +97,7 @@ const Contact = () => {
   };
 
   return (
-    <Section id="contact">
+    <Section id="contact" data-aos = "fade-right">
       <Title>Contact</Title>
       <Form onSubmit={handleSubmit}>
         <Label htmlFor="name">Name:</Label>
