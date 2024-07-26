@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const Section = styled.section`
   text-align: center;
   padding: 50px 20px;
-  background-color: ${props => props.theme.colors.background};
 `;
 
 const Title = styled.h1`

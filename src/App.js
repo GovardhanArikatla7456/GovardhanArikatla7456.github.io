@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import { theme, GlobalStyle } from './theme';
+import { theme, GlobalStyle} from './theme';
+//import GlobalStyle from './GlobalStyle';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About';

@@ -5,7 +5,6 @@ import styled from 'styled-components';
 
 const Section = styled.section`
   text-align: center;
-  background-color: ${props => props.theme.colors.background};
 `;
 
 const Title = styled.h2`
